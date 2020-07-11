@@ -1,0 +1,45 @@
+<div class="links">
+  <%= link_to 'Back', category_path(@category) %>
+</div>
+<div class="title">
+  <%= @image.title %>
+</div>
+<div class="image-wrapper">
+  <div class="image-show__img">
+    <%= image_tag @image.image.url if @image.image? %>
+  </div>
+  <div class="image-show__info">
+    <div class="image-show__info-text">
+      Original size: <%= @image.image.width %> x <%= @image.image.height %>
+    </div>
+    <div class="image-show__info-text">
+      Content type: <%= @image.image.content_type %>
+    </div>
+    <div class="image-show__info-text">
+      Average color: <%= @avg_color %>
+    </div>
+    <div class="image__avg-color__square" style="background-color: <%= @avg_color %>">
+    </div>
+  </div>
+</div>
+
+<div class="links">
+  <%= link_to "Delete image", category_image_path(@category, @image), method: :delete, data: {confirm: "Are you sure?"} %>
+  |
+  <%= link_to "Add similar image", new_category_image_similar_image_path(@category, @image) %>
+
+</div>
+
+<% if @image.similar_images.any? %>
+  <div class="title similar-image__title">Similar images</div>
+  <% @image.similar_images.each do |sml_img| %>
+    <div class="similar-image">
+      <div class="image-title">
+        <%= link_to sml_img.title, category_image_similar_image_path(@category, @image, sml_img)  %>
+      </div>
+      <div class="image-img">
+        <%= image_tag sml_img.image.url if sml_img.image? %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

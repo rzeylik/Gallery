@@ -1,0 +1,34 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.category-index__link {
+  font-size: 20px;
+}
+
+
+.category-index__table {
+  margin: 0 auto;
+  border-spacing: 0px;
+  padding: 10px;
+  border: 4px solid silver;
+  border-radius: 7px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 18px;
+  tr {
+    margin-bottom: 5px;
+  }
+  th {
+    padding: 5px;
+  }
+  th, td {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid silver;
+  }
+
+}
+.image {
+  margin-bottom: 25px;
+}

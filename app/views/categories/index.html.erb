@@ -1,0 +1,20 @@
+<div class="category-index__title title">All categories</div>
+
+<% if @categories.any? %>
+    <table class="category-index__table">
+      <tr>
+        <th>#</th>
+        <th>Category name</th>
+        <th>Amount of images</th>
+      </tr>
+      <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= link_to category.title, category_path(category) %></td>
+        <td><%= category.images.count %></td>
+      </tr>
+      <% end %>
+
+    </table>
+
+<% end %>

@@ -1,0 +1,28 @@
+<div class="links">
+  <%= link_to 'Back', category_image_path(@category, @image) %>
+</div>
+<div class="title">
+  <%= @similar_image.title %>
+</div>
+<div class="image-wrapper">
+  <div class="image-show__img">
+    <%= image_tag @similar_image.image.url if @similar_image.image? %>
+  </div>
+  <div class="image-show__info">
+    <div class="image-show__info-text">
+      Original size: <%= @similar_image.image.width %> x <%= @similar_image.image.height %>
+    </div>
+    <div class="image-show__info-text">
+      Content type: <%= @similar_image.image.content_type %>
+    </div>
+    <div class="image-show__info-text">
+      Average color: <%= @avg_color %>
+    </div>
+    <div class="image__avg-color__square" style="background-color: <%= @avg_color %>">
+    </div>
+  </div>
+</div>
+
+<div class="links">
+  <%= link_to "Delete image", category_image_similar_image_path(@category, @image, @similar_image), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

@@ -1,0 +1,20 @@
+<div class="title">New similar image</div>
+
+<%= form_for([@category, @image, @similar_image], html: {class: 'new-form'}) do |f| %>
+  <div class="input">
+    <%= f.label :title, 'Title:', class: 'input__title' %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="file-upload">
+    <label><%= f.file_field :image, id: 'file-input' %>Choose file</label>
+    <div id="file-description">Image is not choosen</div>
+  </div>
+  <div class="">
+    <%= f.submit 'Save', class: 'btn-save'%>
+  </div>
+<% end %>
+
+<%= form_for [@category, @image, @similar_image] do |f| %>
+    <%= render 'shared/errors', object: @similar_image %>
+    <%# ... %>
+<% end %>

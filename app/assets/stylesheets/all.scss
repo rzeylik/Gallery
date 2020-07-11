@@ -1,0 +1,150 @@
+.input {
+  margin-bottom: 15px;
+  display: flex;
+}
+.input input {
+  border: 2px solid silver;
+  border-radius: 5px;
+  outline: none;
+  max-width: 300px;
+}
+.input__title,
+.input-file__title {
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+.input-file {
+  margin-bottom: 10px;
+}
+.input-file__title {
+  cursor: pointer;
+  outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+  padding: 3px 10px;
+}
+
+.input-file input {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.new-form {
+  max-width: 500px;
+  margin: 0 auto;
+  border:  2px solid silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+.nav-link {
+  padding: 5px;
+}
+
+.nav-link a{
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+}
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.links a {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.links-hr {
+  height: 2px;
+  border: none;
+  background-color: silver;
+}
+.image-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.image-img {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.image-img img {
+  width: 100%;
+}
+
+footer {
+  margin-top: 10px;
+  border-top: 1px solid silver;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
+.btn-save {
+  padding: 3px 15px;
+  letter-spacing: 2px;
+}
+
+.file-upload {
+  display: flex;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#file-input{
+  display:none;
+}
+.file-upload label {
+  cursor: pointer;
+  background: #36c;
+  border-radius: 5px;
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transition: .5s ease;
+
+}
+.file-upload label:hover{
+  background: #292ff0;
+}
+#file-description{
+  margin-left: 20px;
+  color:#000;
+}

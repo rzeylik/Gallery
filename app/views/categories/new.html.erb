@@ -1,0 +1,16 @@
+<div class="title">New category</div>
+
+<%= form_for (@category), html: {class: 'new_category-form new-form'} do |f| %>
+  <div class="category-input input">
+    <%= f.label :title, 'Title: ', class: 'category-input__title input__title' %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="">
+    <%= f.submit 'Save', class: 'btn-save' %>
+  </div>
+<% end %>
+
+<%= form_for [@category] do |f| %>
+    <%= render 'shared/errors', object: @category %>
+    <%# ... %>
+<% end %>

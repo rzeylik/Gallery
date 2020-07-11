@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-size: 18px;
+}
+
+header {
+  border-bottom: 2px solid silver;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #343a40;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+a:hover {
+  color: #000;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.errors {
+  border: 2px solid #f44336;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffcdd2;
+}
+
+.field_with_errors {
+  display: inline;
+}
+.field_with_errors label {
+  color: #f44336;
+}
+.field_with_errors input {
+  border: 2px solid #f44336;
+}

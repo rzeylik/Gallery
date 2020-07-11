@@ -1,0 +1,18 @@
+<div class="title"><%= @category.title %></div>
+<div class="links">
+  <%= link_to "Delete category", category_path(@category), method: :delete, data: {confirm: "Ви впевнені?"} %>
+  |
+  <%= link_to "Add image", new_category_image_path(@category) %>
+</div>
+<hr class="links-hr">
+<% @category.images.each do |img| %>
+  <div class="image">
+    <div class="image-title">
+      <%= link_to img.title, category_image_path(@category, img)  %>
+    </div>
+    <div class="image-img">
+      <%= image_tag img.image.url if img.image? %>
+    </div>
+  </div>
+
+<% end %>
