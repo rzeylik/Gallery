@@ -1,6 +1,6 @@
 <div class="title"><%= @category.title %></div>
 <div class="links">
-  <%= link_to "Delete category", category_path(@category), method: :delete, data: {confirm: "Ви впевнені?"} %>
+  <%= link_to "Delete category", category_path(@category), method: :delete, data: {confirm: "Are you sure?"} %>
   |
   <%= link_to "Add image", new_category_image_path(@category) %>
 </div>
